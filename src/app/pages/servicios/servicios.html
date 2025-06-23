@@ -1,0 +1,18 @@
+<div class="servicios-section">
+  <h2>Nuestros Servicios</h2>
+  <div class="servicios-grid">
+    <div
+      *ngFor="let s of servicios"
+      class="servicio-card"
+      [class.selected]="s.id === selectedId"
+      (click)="select(s)"
+    >
+      <div class="card-image">
+        <img [src]="s.imageUrl" [alt]="s.title" />
+      </div>
+      <div class="card-body">
+        <h3>{{ s.title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

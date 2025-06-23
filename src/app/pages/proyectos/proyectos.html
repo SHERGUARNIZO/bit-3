@@ -1,0 +1,18 @@
+<div class="hero">
+  <div class="carousel-container">
+    <img
+      class="carousel-image"
+      [src]="currentImage"
+      alt="Carrusel Coringam"
+      [class.fade-out]="isFading"
+    />
+
+    <!-- Overlay con logo, texto y botón -->
+    <div class="hero-overlay">
+        <img src="assets/images/logo/logo.png" alt="Coringam Logo" class="hero-logo" />
+      <h1>DISEÑAMOS TERRITORIO.</h1>
+      <h2>RESTAURAMOS EQUILIBRIO.</h2>
+      <button routerLink="/proyectos" class="hero-btn">Conoce nuestros proyectos</button>
+    </div>
+  </div>
+</div>

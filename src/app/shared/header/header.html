@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+   <a class="logo" routerLink="/proyectos">
+      <img src="/assets/images/logo/logo.png" alt="Coringam Logo" />
+    </a>
+
+      <!-- Links -->
+    <ul class="nav-links" [class.open]="isMenuOpen">
+      <li><a routerLink="/proyectos" routerLinkActive="active">Proyectos</a></li>
+      <li><a routerLink="/servicios"  routerLinkActive="active">Servicios</a></li>
+      <li><a routerLink="/staff"      routerLinkActive="active">Staff</a></li>
+      <li><a routerLink="/contacto"   routerLinkActive="active">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
