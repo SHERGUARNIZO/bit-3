@@ -1,3 +1,4 @@
+<!-- ─── HERO / CARRUSEL ──────────────────────────────────────────────────── -->
 <div class="hero">
   <div class="carousel-container">
     <img
@@ -6,13 +7,57 @@
       alt="Carrusel Coringam"
       [class.fade-out]="isFading"
     />
+  </div>
 
-    <!-- Overlay con logo, texto y botón -->
-    <div class="hero-overlay">
-        <img src="assets/images/logo/logo.png" alt="Coringam Logo" class="hero-logo" />
-      <h1>DISEÑAMOS TERRITORIO.</h1>
-      <h2>RESTAURAMOS EQUILIBRIO.</h2>
-      <button routerLink="/proyectos" class="hero-btn">Conoce nuestros proyectos</button>
-    </div>
+  <!-- Overlay con logo, texto y botón -->
+  <div class="hero-overlay">
+    <img
+      src="assets/images/logo/logo.png"
+      alt="Coringam Logo"
+      class="hero-logo"
+    />
+    <h1>DISEÑAMOS TERRITORIO.</h1>
+    <h2>RESTAURAMOS EQUILIBRIO.</h2>
+
+    <section class="page-desc">
+      <div class="page-desc__box">
+        <p>
+          Somos una organización Colombiana que desarrolla soluciones
+          sostenibles y estratégicas para el territorio. Nos
+          especializamos en Ingeniería, Geotecnia y pavimentos, topografía,
+          avalúos, ordenamiento territorial, Cartografía, Sistemas de
+          Información Geográfica y soporte profesional.
+        </p>
+      </div>
+    </section>
+
+    <button routerLink="/proyectos" class="hero-btn">
+      Conoce nuestros proyectos
+    </button>
   </div>
 </div>
+<!-- /fin de .hero -->
+
+<!-- ─── GRID DE CLIMA (YA NO DENTRO DE HERO) ───────────────────────────────── -->
+<section class="weather-grid">
+  <ng-container *ngIf="!loadingWthr; else loadingTpl">
+    <div *ngFor="let w of weatherList" class="weather-card">
+      <h3 class="weather-city">{{ w.city }}</h3>
+      <img class="weather-icon" [src]="w.icon" [alt]="w.desc" />
+      <p class="weather-temp">{{ w.temp | number:'1.0-0' }}°C</p>
+      <p class="weather-desc">{{ w.desc }}</p>
+      <p class="weather-extra">
+        💧 {{ w.humidity }}% 🌬️ {{ w.windSpeed }} m/s
+      </p>
+    </div>
+  </ng-container>
+
+  <ng-template #loadingTpl>
+    <div class="weather-loading">Cargando clima…</div>
+  </ng-template>
+
+  <div class="weather-error" *ngIf="errorWthr">
+    {{ errorWthr }}
+  </div>
+</section>
+
