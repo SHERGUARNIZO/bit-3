@@ -1,4 +1,4 @@
-# Bit3
+# Bit-3
 
 Aplicación SPA desarrollada en Angular como parte del proyecto calificable.
 
