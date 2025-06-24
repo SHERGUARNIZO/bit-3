@@ -10,4 +10,4 @@ Este proyecto consiste en una Single Page Application (SPA) desarrollada con Ang
 
 **Sherly Guarnizo**  
 [GitHub: SHERGUARNIZO](https://github.com/SHERGUARNIZO)  
-Correo: coringam.proyectos@gmail.com
+Correo: sherlyguarnizo@gmail.com
